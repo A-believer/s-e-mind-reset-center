@@ -12,7 +12,7 @@ function ContactHero() {
 					Reach out to us for inquiries, support, or to schedule an appointment
 				</p>
 				<Link
-					href={"https://cal.com"}
+					href={"https://cal.com/s-e-mind-reset-center-zj5xrh"}
 					className='bg-[#246A4E] text-[#D7DAD4] font-bold rounded-md py-[12.5px] px-14 hover:bg-[#0e3525] transition-all duration-500'>
 					Book An Appointment
 				</Link>

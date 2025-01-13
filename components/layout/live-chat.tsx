@@ -22,7 +22,7 @@ export function LiveChat({
 		<Popover open={isOpen} onOpenChange={onOpenChange}>
 			<PopoverTrigger asChild>
 				<Button
-					className='fixed bottom-4 right-4 h-[75px] w-[75px] rounded-full'
+					className='fixed bottom-4 right-4 '
 					variant='default'><Image src={livechatimage} alt="live chat icon"/>
 					
 				</Button>

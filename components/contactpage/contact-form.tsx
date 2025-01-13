@@ -59,7 +59,7 @@ function ContactForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className='bg-[#2E3D37] lg:pt-12 pt-10 lg:pb-20 pb-14'>
+				className='bg-[#0F3857] lg:pt-12 pt-10 lg:pb-20 pb-14'>
 				<div
 					style={{
 						backgroundImage: `url(${backgroundImage.src})`,
@@ -168,7 +168,7 @@ function ContactForm() {
 
 						<Button
 							type='submit'
-							className='w-full bg-[#70B301] hover:bg-[#0A241A] text-[#0A241A] hover:text-[#70B301] font-semibold'>
+							className='w-full bg-[#60A7DC] hover:bg-[#0A241A] text-[#0A241A] hover:text-[#60A7DC] font-semibold'>
 							Send Message
 						</Button>
 					</div>

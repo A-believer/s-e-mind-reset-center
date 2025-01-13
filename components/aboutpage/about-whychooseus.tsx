@@ -3,11 +3,11 @@ import img from "@/public/images/about-whychooseus-image.png";
 
 function AboutWhychooseus() {
 	return (
-		<section className='bg-[#2E3D37] text-white pt-16 font-inter'>
+		<section className='bg-[#0F3857] text-white pt-16 xl:pb-0 pb-14 font-inter space-y-10'>
 			<p className='w-full text-center text-[40px] leading-[56px] font-medium font-poppins'>
 				Why Choose Us?
 			</p>
-			<div className='max-w-[1440px] w-[95%] ml-auto flex items-center justify-between'>
+			<div className='max-w-[1440px] w-[95%] ml-auto flex lg:flex-row flex-col items-center justify-between'>
 				<div className='max-w-[640px] w-full space-y-12'>
 					<div className='space-y-2'>
 						<p className='text-xl leading-8 font-medium'>

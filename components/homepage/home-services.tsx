@@ -1,4 +1,3 @@
-import backgroundImage from "@/public/images/home-services.png";
 import icon1 from "@/public/icons/services-1.png";
 import icon2 from "@/public/icons/services-2.png";
 import icon3 from "@/public/icons/services-3.png";
@@ -48,26 +47,29 @@ const services = [
 
 function HomeServices() {
 	return (
-		<section className='w-full bg-[#2E3D37] lg:py-28 py-20 font-averia'>
-			<div
-				style={{
-					backgroundImage: `url(${backgroundImage.src})`,
-					backgroundPosition: "center bottom",
-				}}
-				className='bg-no-repeat bg-contain h-full '>
-				<div className='text-center space-y-4 text-white pb-[71px]'>
-					<h3 className='font-bold text-[40px]'>Our Services at a Glance</h3>
-					<p>
+		<section className=' bg-[#E8F5FF]  text-[#0F3857] font-amiri'>
+			<div className="w-[90%] max-w-[1440px] mx-auto lg:py-28 py-20">
+				<div className='text-center space-y-4 pb-[71px]'>
+					<h3 className='font-bold md:text-[50px] text-3xl md:leading-[54px] leading-9'>
+						Comprehensive{" "}
+						<span className='text-[#F27207]'>Mental Health Services</span>{" "}
+						Tailored to You
+					</h3>
+					<p className='text-xl leading-7 font-bold'>
 						From psychiatric evaluations to ongoing support, we’re here to help
 						you thrive
 					</p>
 				</div>
-				<div className='center flex gap-5 flex-wrap justify-center'>
+				<div className='flex gap-5 flex-wrap justify-center font-averia'>
 					{services.map((service) => (
 						<article
 							key={service.id}
-							className='flex flex-col items-center gap-y-6 lg:w-[390px] w-[300px] bg-[#F3F6EF] rounded-[22px] pt-6 pb-8 text-center lg:h-[280px] md:h-[380px] h-full'>
-							<Image src={service.icon} alt={service.title} />
+							className='flex flex-col items-center gap-y-6 lg:w-[390px] w-[300px] bg-[#F8FEFF] rounded-[22px] pt-6 pb-8 text-center lg:h-[320px] sm:h-[380px] h-full border border-[#FD7E14]'>
+							<Image
+								src={service.icon}
+								alt={service.title}
+								className='w-[123px] h-[123px] object-contain'
+							/>
 							<h4 className='font-bold text-xl leading-8 capitalize w-[70%]'>
 								{service.title}
 							</h4>

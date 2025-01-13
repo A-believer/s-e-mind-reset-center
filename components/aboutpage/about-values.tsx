@@ -8,7 +8,11 @@ function AboutValues() {
   return (
 		<section className='bg-white font-poppins text-black'>
 			<div className='max-w-[1440px] w-[90%] mx-auto lg:py-14 py-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-x-20 gap-y-10'>
-				<Image src={img} alt='mission image' className='max-w-[383px] w-full h-auto' />
+				<Image
+					src={img}
+					alt='mission image'
+					className='max-w-[383px] w-full h-auto'
+				/>
 				<div className='space-y-7 w-full'>
 					<p>Our values</p>
 					<h3 className='text-[48px] leading-[64px]'>
@@ -29,7 +33,7 @@ function AboutValues() {
 								className='bg-[#F4F4F4] xl:w-full w-fit flex items-center gap-x-5 rounded-[14px] sm:py-5 py-2 sm:px-7 px-2'
 								key={item}>
 								<span className='bg-white sm:w-12 w-10 sm:h-12 h-10 rounded-full flex justify-center items-center'>
-									<Users className='text-[#246A4E]' size={20} />
+									<Users className='text-[#FD7E14]' size={20} />
 								</span>
 								<span className='text-[#57575F]'>{item}</span>
 							</li>

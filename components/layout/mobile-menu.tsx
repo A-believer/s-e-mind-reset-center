@@ -20,8 +20,8 @@ export function MobileMenu() {
 			<DropdownMenuTrigger asChild>
 				<AlignRight color='#0A241A' size={24} />
 			</DropdownMenuTrigger>
-			<DropdownMenuContent className='w-[300px] mt-6 bg-[#0A241A] text-white'>
-				<DropdownMenuLabel className='text-gray-600'>Menu</DropdownMenuLabel>
+			<DropdownMenuContent className='w-[300px] mt-6 bg-[#60A7DC] text-white'>
+				<DropdownMenuLabel className='text-blue-600'>Menu</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup className=' flex flex-col gap-y-3 items-center py-5'>
 					<DropdownMenuItem>
@@ -35,11 +35,29 @@ export function MobileMenu() {
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						<Link
+							href={"/about"}
+							className={`${
+								pathname === "/about" && "border-b-2"
+							} hover:border-b-2 pb-2`}>
+							About
+						</Link>
+					</DropdownMenuItem>
+					<DropdownMenuItem>
+						<Link
 							href={"/services"}
 							className={`${
 								pathname === "/services" && "border-b-2"
 							} hover:border-b-2 pb-2`}>
 							Services
+						</Link>
+					</DropdownMenuItem>
+					<DropdownMenuItem>
+						<Link
+							href={"/blogs"}
+							className={`${
+								pathname === "/blogs" && "border-b-2"
+							} hover:border-b-2 pb-2`}>
+							Blogs
 						</Link>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
@@ -59,7 +77,7 @@ export function MobileMenu() {
 					<DropdownMenuItem>
 						<Link
 							href={"/"}
-							className='rounded-md text-black bg-[#70B301] px-6 py-2 text-sm font-semibold'>
+							className='rounded-md text-black bg-[#60A7DC] px-6 py-2 text-sm font-semibold'>
 							Get Started
 						</Link>
 					</DropdownMenuItem>

@@ -4,7 +4,7 @@ import {
 	PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import livechatimage from "@/public/icons/livechat-icon.png";
+import livechatimage from "@/public/icons/livechat-icon.png"
 import Image from "next/image";
 
 interface LiveChatProps {
@@ -13,14 +13,18 @@ interface LiveChatProps {
 	onStartChat: () => void;
 }
 
-export function LiveChat({ isOpen, onOpenChange, onStartChat }: LiveChatProps) {
+export function LiveChat({
+	isOpen,
+	onOpenChange,
+	onStartChat,
+}: LiveChatProps) {
 	return (
 		<Popover open={isOpen} onOpenChange={onOpenChange}>
 			<PopoverTrigger asChild>
 				<Button
 					className='fixed bottom-4 right-4 h-[75px] w-[75px] rounded-full'
-					variant='default'>
-					<Image src={livechatimage} alt='live chat icon' />
+					variant='default'><Image src={livechatimage} alt="live chat icon"/>
+					
 				</Button>
 			</PopoverTrigger>
 			<PopoverContent className='w-80' align='end'>

@@ -88,13 +88,15 @@ function ServiceEachService() {
     
 
     return (
-			<section className='bg-[#F9FCF3] space-y-6'>
+			<section className='bg-[#EDF8FF] space-y-6 font-inter'>
 				{services.map((service, index) => (
 					<div
 						key={service.id}
 						className={`max-w-[1440px] w-[90%] mx-auto flex ${
-							index % 2 === 0 ? "flex-col-reverse lg:flex-row-reverse" : "flex-col lg:flex-row"
-						} items-center justify-between px-8 py-6 gap-10`}>
+							index % 2 === 0
+								? "flex-col-reverse lg:flex-row-reverse"
+								: "flex-col lg:flex-row"
+						} items-center justify-between px-8 py-6 gap-10 text-[#0F141E]`}>
 						<div className='lg:w-1/2 w-full'>
 							<h3 className='text-[32px] leading-10 font-semibold'>
 								{service.header}
@@ -102,7 +104,7 @@ function ServiceEachService() {
 							<p className='mt-2 mb-5 text-base leading-6'>
 								{service.subheader}
 							</p>
-							<ul className='text-base leading-6 marker:text-black list-disc list-outside space-y-6 ml-10'>
+							<ul className='text-base leading-6 marker:text-black list-disc list-outside space-y-6 ml-5 	text-[#2C374F]'>
 								{service.points.map((point) => (
 									<li key={point}>{point}</li>
 								))}

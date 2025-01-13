@@ -2,19 +2,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/icons/nav-logo.png";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 function Footer() {
 	return (
-		<footer className='bg-[#0A1712] text-white w-full md:py-16 py-10'>
+		<footer className='bg-[#0F3857] text-white w-full md:py-16 py-10'>
 			<div className='max-w-[1440px] w-[90%] mx-auto space-y-6'>
-				<Link href={"/"}>
-					<Image src={logo} alt='S and E logo' />
+				<Link href={"/"} className="w-fit">
+					<Image
+						src={logo}
+						alt='S and E logo'
+						className='object-cover h-10 w-[101px]'
+					/>
 				</Link>
 				<p>
-					S & M Mental Health Services LLC is here to support individuals and
+					S&E Mind Reset Center is here to support individuals and families
+					
 					<br className='md:block hidden' />
-					families through personalized and effective treatment plans.
+					through personalized and effective treatment plans.
 				</p>
 				<nav className='flex md:items-center md:gap-8 gap-6 flex-wrap'>
 					{/* <Link className="hover:font-semibold hover:underline" href={""}>Overview</Link> */}
@@ -57,7 +62,7 @@ function Footer() {
 							<Facebook />
 						</Link>
 						<Link href={""}>
-							<Instagram />
+							<Linkedin />
 						</Link>
 						<Link href={""}>
 							<Twitter />

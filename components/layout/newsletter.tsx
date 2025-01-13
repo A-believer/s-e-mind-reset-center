@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import { Button } from "../ui/button";
+import { Checkbox } from "../ui/checkbox";
 import {
 	Form,
 	FormControl,
@@ -18,6 +20,7 @@ const newsletterEmailSchema = z.object({
 	userEmail: z.string().min(2, {
 		message: "userEmail must be at least 2 characters.",
 	}),
+	acceptPrivacyPolicy: z.boolean().default(false).optional(),
 });
 
 function Newsletter() {
@@ -25,6 +28,7 @@ function Newsletter() {
 		resolver: zodResolver(newsletterEmailSchema),
 		defaultValues: {
 			userEmail: "",
+			acceptPrivacyPolicy: false,
 		},
 	});
 
@@ -32,13 +36,13 @@ function Newsletter() {
 		console.log(values);
 	}
 	return (
-		<section className='bg-[#F1FFD6] w-full'>
+		<section className='bg-[#E9F9FC] w-full'>
 			<div className='max-w-[1440px] mx-auto w-[90%] md:py-16 py-10 flex lg:flex-row flex-col items-center justify-between gap-10'>
-				<div className='font-averia space-y-5 text-black tracking-[-2%] lg:w-1/2 w-full'>
-					<h3 className='text-4xl leading-[44px] font-semibold '>
+				<div className='font-amiri space-y-5 text-black tracking-[-2%] w-full'>
+					<h3 className='md:text-[44px] text-[36px] md:leading-[50px] leading-10 font-bold '>
 						Stay Connected with Us
 					</h3>
-					<p className='text-xl leading-7 text-[#0A241A]'>
+					<p className='md:text-xl text-base md:leading-7 leading-6 text-[#0A241A] font-bold'>
 						Be the first to get mental health tips, updates, and exclusive
 						<br className='xl:block hidden' />
 						insights.
@@ -48,19 +52,18 @@ function Newsletter() {
 				<Form {...form}>
 					<form
 						onSubmit={form.handleSubmit(onSubmit)}
-						className='space-y-4 lg:w-1/2 w-full'>
-						<div className='flex items-center justify-end gap-6 text-base w-full'>
+						className='space-y-4 w-full mr-0'>
+						<div className='flex items-center gap-6 text-base w-full'>
 							<FormField
 								control={form.control}
 								name='userEmail'
 								render={({ field }) => (
-									<FormItem className='max-w-[360px] w-full mr-0'>
-										<FormLabel></FormLabel>
+									<FormItem className='w-full mr-0'>
 										<FormControl>
 											<Input
 												type='em'
-												placeholder='enter email'
-												className='w-full px-4 py-3 rounded-lg'
+												placeholder='Enter your email'
+												className='w-full h-full px-4 py-3 rounded-lg'
 												{...field}
 											/>
 										</FormControl>
@@ -70,14 +73,33 @@ function Newsletter() {
 							/>
 							<Button
 								type='submit'
-								className='bg-[#70B301] text-black hover:text-[#70B301] font-bold py-3 px-6'>
+								className='bg-[#60A7DC] text-black hover:text-[#60A7DC] hover:bg-black font-bold py-3 px-6'>
 								Subscribe Now
 							</Button>
 						</div>
-						<p className='text-right text-[#667085] text-sm leading-5 font-averia'>
-							Your privacy matters. We’ll never share your information without
-							your consent.
-						</p>
+						<FormField
+							control={form.control}
+							name='acceptPrivacyPolicy'
+							render={({ field }) => (
+								<FormItem className='flex items-start space-x-3 space-y-0 mr-0'>
+									<FormControl>
+										<Checkbox
+											checked={field.value}
+											onCheckedChange={field.onChange}
+											className='border-[#D0D5DD] bg-white data-[state=checked]:bg-[#0F3857] data-[state=checked]:border-[#0F3857] data-[state=checked]:text-white h-5 w-5'
+										/>
+									</FormControl>
+									<FormLabel className='font-normal text-sm leading-5 font-averia text-[#0A241A]'>
+										I consent to the collection and use of my data for the
+										purposes{" "}
+										<Link href={`/privacy-policy`} className='text-[#FD7E14]'>
+											outlined
+										</Link>
+									</FormLabel>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
 					</form>
 				</Form>
 			</div>

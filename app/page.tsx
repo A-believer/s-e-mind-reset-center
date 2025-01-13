@@ -7,12 +7,12 @@ import HomeWhyChooseUs from "@/components/homepage/home-whychooseus";
 
 function HomePage() {
 	return (
-		<main className=''>
+		<main className='w-full'>
 			<HomeHero />
 			<HomeServices />
-			<HomeSpecialtiesExpertise />
-			<HomeWhyChooseUs />
 			<HomeBookAnAppointment />
+			<HomeWhyChooseUs />
+			<HomeSpecialtiesExpertise />
 			<HomeTestimonials />
 		</main>
 	);
